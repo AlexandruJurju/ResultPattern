@@ -1,4 +1,4 @@
-﻿namespace ResultPattern;
+﻿namespace ResultPattern.ResultPattern;
 
 public static class ResultExtensions
 {

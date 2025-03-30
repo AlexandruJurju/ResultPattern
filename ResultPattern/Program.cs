@@ -1,5 +1,5 @@
-using ResultPattern;
-using ResultPattern.Errors;
+using ResultPattern.Endpoints.User;
+using ResultPattern.Users;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,8 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 
-var app = builder.Build();
+builder.Services.AddSingleton<IUserRepository, UserRepository>();
 
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -19,5 +20,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+Register.MapEndpoint(app);
 
 app.Run();

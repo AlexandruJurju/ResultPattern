@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace ResultPattern;
+namespace ResultPattern.ResultPattern;
 
 public class Result
 {
@@ -25,7 +25,7 @@ public class Result
     public bool IsFailure => !IsSuccess;
     public Error Error { get; }
 
-    public static Result Success() => new(true, ResultPattern.Error.None);
+    public static Result Success() => new(true, global::ResultPattern.ResultPattern.Error.None);
 
     public static Result Failure(Error error) => new(false, error);
 

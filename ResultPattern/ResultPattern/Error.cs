@@ -1,4 +1,4 @@
-﻿namespace ResultPattern;
+﻿namespace ResultPattern.ResultPattern;
 
 public sealed record Error(string Code, string Description)
 {
