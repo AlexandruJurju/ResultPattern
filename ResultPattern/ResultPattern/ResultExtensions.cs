@@ -2,11 +2,19 @@
 
 public static class ResultExtensions
 {
-    public static T Match<T>(
+    public static TOut Match<TOut>(
         this Result result,
-        Func<T> onSuccess,
-        Func<Error, T> onFailure)
+        Func<TOut> onSuccess,
+        Func<Result, TOut> onFailure)
     {
-        return result.IsSuccess ? onSuccess() : onFailure(result.Error);
+        return result.IsSuccess ? onSuccess() : onFailure(result);
+    }
+
+    public static TOut Match<TIn, TOut>(
+        this Result<TIn> result,
+        Func<TIn, TOut> onSuccess,
+        Func<Result<TIn>, TOut> onFailure)
+    {
+        return result.IsSuccess ? onSuccess(result.Value) : onFailure(result);
     }
 }

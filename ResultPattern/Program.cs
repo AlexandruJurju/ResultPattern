@@ -21,5 +21,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 Register.MapEndpoint(app);
+GetByEmail.MapEndpoint(app);
 
 app.Run();

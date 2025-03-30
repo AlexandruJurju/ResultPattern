@@ -7,7 +7,7 @@ public class GetByEmail : IEndpoint
 {
     public static void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet("users/{id:int}", HandleGetByEmailRequest)
+        app.MapGet("users/{email}", HandleGetByEmailRequest)
             .WithName("GetByEmail")
             .WithOpenApi()
             .Produces<Users.User>(StatusCodes.Status200OK)
@@ -16,10 +16,10 @@ public class GetByEmail : IEndpoint
 
     private static IResult HandleGetByEmailRequest(string email, IUserRepository userRepository)
     {
-        var getResult = userRepository.GetByEmail(email);
+        var result = userRepository.GetByEmail(email);
 
-        return getResult.Match(
-            onSuccess: () => Result.Success(),
-            onFailure: e => );
+        return result.Match(
+            onSuccess: user => Results.Ok(user),
+            onFailure: error => CustomResults.Problem(error));
     }
 }

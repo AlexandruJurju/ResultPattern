@@ -4,15 +4,23 @@ namespace ResultPattern.Errors;
 
 public static class UserErrors
 {
-    public static Error NotFound(int id) => new Error(
+    public static Error NotFound(int userId) => Error.NotFound(
         "Users.NotFound",
-        $"The user with id {id} was not found.");
+        $"The user with the Id = '{userId}' was not found");
 
-    public static Error NotFound(string email) => new Error(
+    public static Error NotFound(string email) => Error.NotFound(
         "Users.NotFound",
-        $"The user with email {email} was not found.");
-    
-    public static Error AlreadyExist() => new Error(
-        "Users.AlreadyExists",
-        "User already exists.");
+        $"The user with the email = '{email}' was not found");
+
+    public static Error Unauthorized() => Error.Failure(
+        "Users.Unauthorized",
+        "You are not authorized to perform this action.");
+
+    public static readonly Error NotFoundByEmail = Error.NotFound(
+        "Users.NotFoundByEmail",
+        "The user with the specified email was not found");
+
+    public static readonly Error EmailNotUnique = Error.Conflict(
+        "Users.EmailNotUnique",
+        "The provided email is not unique");
 }
