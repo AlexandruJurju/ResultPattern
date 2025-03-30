@@ -1,6 +1,8 @@
 ﻿namespace ResultPattern.Errors;
 
-public class TestErrors
+public static class TestErrors
 {
-    
+    public static Error NotFound(int id) => new Error(
+        "Test.NotFound",
+        $"The entry with id {id} was not found.");
 }
