@@ -1,3 +1,4 @@
+using ResultPattern.Endpoints;
 using ResultPattern.Endpoints.User;
 using ResultPattern.Users;
 using Scalar.AspNetCore;
@@ -8,6 +9,8 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSingleton<IUserRepository, UserRepository>();
+
+builder.Services.AddEndpoints(typeof(Program).Assembly);
 
 var app = builder.Build();
 
@@ -20,7 +23,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-Register.MapEndpoint(app);
-GetByEmail.MapEndpoint(app);
+app.MapEndpoints();
+
 
 app.Run();

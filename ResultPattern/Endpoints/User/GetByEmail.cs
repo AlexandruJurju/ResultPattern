@@ -5,7 +5,7 @@ namespace ResultPattern.Endpoints.User;
 
 public class GetByEmail : IEndpoint
 {
-    public static void MapEndpoint(IEndpointRouteBuilder app)
+    public void MapEndpoint(IEndpointRouteBuilder app)
     {
         app.MapGet("users/{email}", HandleGetByEmailRequest)
             .WithName("GetByEmail")

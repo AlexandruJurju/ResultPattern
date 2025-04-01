@@ -7,7 +7,7 @@ public class Register : IEndpoint
 {
     public sealed record Request(int Id, string Email, string Name);
 
-    public static void MapEndpoint(IEndpointRouteBuilder app)
+    public void MapEndpoint(IEndpointRouteBuilder app)
     {
         app.MapPost("users/register", HandleRegistration)
             .WithName("RegisterUser")
