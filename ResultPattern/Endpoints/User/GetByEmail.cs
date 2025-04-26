@@ -19,7 +19,7 @@ public class GetByEmail : IEndpoint
         var result = userRepository.GetByEmail(email);
 
         return result.Match(
-            onSuccess: user => Results.Ok(user),
-            onFailure: error => CustomResults.Problem(error));
+            onSuccess: Results.Ok,
+            onFailure: CustomResults.Problem);
     }
 }

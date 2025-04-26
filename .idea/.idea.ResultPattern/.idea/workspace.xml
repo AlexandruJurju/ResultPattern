@@ -9,12 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be551a57-00ff-4e27-af8c-c10db01ace13" name="Changes" comment="starting result pattern">
-      <change afterPath="$PROJECT_DIR$/ResultPattern/Endpoints/EndpointExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResultPattern/ControllerExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResultPattern/Controllers/TestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ResultPattern/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResultPattern/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ResultPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResultPattern/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResultPattern/Endpoints/IEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ResultPattern/Endpoints/IEndpoint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ResultPattern/Endpoints/User/GetByEmail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ResultPattern/Endpoints/User/GetByEmail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResultPattern/Endpoints/User/Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ResultPattern/Endpoints/User/Register.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ResultPattern/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ResultPattern/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResultPattern/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ResultPattern/Properties/launchSettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21d276bbf0ce4e07804583c60a7393d440920/52/0ed3ae9c/Results.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6fa05d7dbf2e454ce78b261b422234da1f1ccedee678fd997e5ef4afe6df6e/ControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d3dab7cf883412b438da375f826557f15f3897b7137e31e64c84fe67321e7/ProblemDetails.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ResultPattern/ResultPattern/Error.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ResultPattern/ResultPattern/Result.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -36,28 +40,29 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2v20MHMU8Kf521y9VolJgjbKNU8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.ResultPattern: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.ResultPattern: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ResultPattern: http">
     <configuration name="ResultPattern: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ResultPattern/ResultPattern.csproj" />
@@ -103,6 +108,8 @@
       <workItem from="1743347104622" duration="686000" />
       <workItem from="1743348740477" duration="327000" />
       <workItem from="1743351377388" duration="300000" />
+      <workItem from="1745590992999" duration="1087000" />
+      <workItem from="1745639095654" duration="74000" />
     </task>
     <servers />
   </component>
@@ -115,5 +122,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="starting result pattern" />
     <option name="LAST_COMMIT_MESSAGE" value="starting result pattern" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

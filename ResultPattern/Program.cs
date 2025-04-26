@@ -12,6 +12,9 @@ builder.Services.AddSingleton<IUserRepository, UserRepository>();
 
 builder.Services.AddEndpoints(typeof(Program).Assembly);
 
+// For controllers
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,5 +28,7 @@ app.UseHttpsRedirection();
 
 app.MapEndpoints();
 
+// For controllers
+app.MapControllers();
 
 app.Run();
